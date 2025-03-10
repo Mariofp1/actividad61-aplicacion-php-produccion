@@ -1,15 +1,19 @@
-CREATE TABLE empleados (
-  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  apellido VARCHAR(100) NOT NULL,
-  nombre VARCHAR(100) NOT NULL,
-  edad INT UNSIGNED NOT NULL,
-  puesto VARCHAR(100) NOT NULL
+CREATE SCHEMA IF NOT EXISTS actividad61MaFe;
+
+USE actividad61MaFe;
+
+CREATE TABLE articulos (
+  articulo_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  apellido_autor VARCHAR(100) NOT NULL,
+  nombre_autor VARCHAR(100) NOT NULL,
+  deporte INT UNSIGNED NOT NULL,
+  fecha_publicacion DATE NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Coloma', 'Javier', 25, 'Contable');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Oviedo', 'Carmen', 34, 'Administrativo');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Vargas', 'Pascual', 19, 'Dependiente');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Donoso', 'Maria', 45, 'Gerente');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Celis', 'Manuel', 56, 'Dependiente');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Palencia', 'Jana', 31, 'Dependiente');
-INSERT INTO empleados (apellido, nombre, edad, puesto) VALUES('Zamanillo', 'Pedro', 63, 'Repartidor');
+INSERT INTO articulos (apellido_autor, nombre_autor, deporte, fecha_publicacion) VALUES('Ortuño', 'Alfredo', 'fútbol', '04-06-2024');
+INSERT INTO articulos (apellido_autor, nombre_autor, deporte, fecha_publicacion) VALUES('Magallanes', 'Cayetano', 'waterpolo', '16-08-2024');
+INSERT INTO articulos (apellido_autor, nombre_autor, deporte, fecha_publicacion) VALUES('Vargas', 'Mario', 'baloncesto', '30-10-2024');
+INSERT INTO articulos (apellido_autor, nombre_autor, deporte, fecha_publicacion) VALUES('Pérez', 'Maria', 'atletismo', '11-12-2024');
+INSERT INTO articulos (apellido_autor, nombre_autor, deporte, fecha_publicacion) VALUES('Celis', 'Nuria', 'rugby', '10-01-2025');
+INSERT INTO articulos (apellido_autor, nombre_autor, deporte, fecha_publicacion) VALUES('Ortuño', 'Alfredo', 'fútbol', '21-02-2025');
+INSERT INTO articulos (apellido_autor, nombre_autor, deporte, fecha_publicacion) VALUES('Vargas', 'Mario', 'baloncesto', '01-03-2025');
